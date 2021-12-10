@@ -1,13 +1,13 @@
 ---
-title: "Xiang Guo"
-image: "xiang.jpg"
+title: "Zane Dax"
+image: "mylogo30.png"
 links:
   - label: LinkedIn
     url: "https://linkedin.com/"
   - label: Twitter
-    url: "https://twitter.com/"
+    url: "https://twitter.com/StarTrek_Lt"
   - label: GitHub
-    url: "https://github.com/"
+    url: "https://github.com/PythonCoderUnicorn"
   - label: Email
     url: "mailto:email@email.com"
 output:
