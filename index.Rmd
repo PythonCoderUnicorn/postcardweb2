@@ -16,4 +16,70 @@ knitr::opts_chunk$set(echo = FALSE)
 This is a website made with R Markdown and postcards and distill packages 
 and deployed on netlify 🚀
 
-this is new text ! 
+# Starwars Data 
+
+to test out the functions of this distill pkg 
+
+
+```{r, fig.width=15, fig.height=10, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(ggplot2)
+library(showtext)
+
+font_add_google(family = 'Lato','Lato')
+showtext_auto()
+
+starwars %>% 
+  select(eye_color, height) %>% 
+  group_by(eye_color) %>% 
+  ggplot(
+    aes(x= height,
+        y= eye_color
+        )
+  ) +
+  geom_point(size= 5, color='purple')+
+  # ggdark::dark_mode()+
+  labs(
+    title = "Starwars Data, eye color by height"
+  )+
+  theme(
+    text = element_text(family = 'Lato', size = 13),
+    plot.title = element_text(size = 15,
+                              vjust = 0.5)
+  )
+  
+
+```
+
+
+
+
+# header 2
+
+lorem ipsum 
+
+
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus rutrum orci, at accumsan ipsum porttitor ut. Quisque hendrerit ipsum eu malesuada pretium. Cras luctus aliquet enim in viverra. Suspendisse sodales, purus ut auctor bibendum, turpis dolor varius quam, egestas sollicitudin turpis magna eget ipsum. In lacus risus, convallis rhoncus tincidunt nec, fermentum vel nunc. Phasellus condimentum dui nisi, non cursus lacus fermentum in. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras at turpis eget lacus pulvinar imperdiet. Duis neque nulla, molestie sed rhoncus eget, consequat sed velit. Sed venenatis efficitur nisl a pharetra. Mauris nec metus consectetur, dignissim nisi non, scelerisque lacus. Cras suscipit commodo suscipit.
+
+Sed eleifend quam sed sem vehicula, eu suscipit erat sodales. Quisque est ipsum, ultrices tempus faucibus vel, consectetur sit amet orci. Aliquam aliquet lectus non justo euismod semper. Duis interdum hendrerit blandit. In eleifend finibus placerat. Sed eu vehicula dui. In eget leo feugiat magna consequat lacinia non scelerisque mauris. Nam mollis consectetur risus, ac tincidunt nibh tincidunt sed. Ut diam lacus, condimentum non tortor a, iaculis facilisis lectus.
+
+Vestibulum iaculis, nulla id maximus accumsan, leo felis tincidunt augue, luctus posuere lectus diam sed justo. Donec at lacus convallis, pretium urna id, lobortis lectus. Maecenas imperdiet dui nisl, non elementum risus gravida at. Pellentesque nec mauris sit amet lectus hendrerit dignissim. Cras sollicitudin luctus magna, vel pulvinar diam auctor in. Morbi faucibus eget purus in pretium. Maecenas commodo libero eu est egestas, vitae vestibulum velit interdum.
+
+Quisque at arcu id leo efficitur maximus sit amet non ipsum. Phasellus tortor ante, dignissim at dapibus sed, gravida sollicitudin mi. Sed sollicitudin neque eget tellus malesuada, at ultrices sapien malesuada. Donec maximus nibh eu enim varius pharetra. Nam vehicula rhoncus sapien, varius convallis est euismod eu. Morbi porta metus tortor, id porta neque varius id. Proin volutpat feugiat volutpat. Nam malesuada nulla sed nisl mollis, sed condimentum nulla pulvinar. Quisque dolor nisi, interdum posuere massa eget, congue accumsan turpis.
+
+Sed vitae dignissim sem. Fusce ac finibus leo. Aliquam mattis ante vitae metus condimentum, quis congue dui porta. Sed sit amet tempor urna, vel tempus ipsum. Donec fringilla lacus at erat ornare, id pulvinar magna lacinia. Nulla facilisi. Etiam eu tellus vel augue posuere dapibus eget id ante.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
